@@ -1,5 +1,6 @@
 package com.mariojr.helpdeskws.api.entity;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -121,6 +122,9 @@ public class Ticket {
 	}
 
 	public List<ChangeStatus> getChanges() {
+		if(changes == null) {
+			changes = new ArrayList<ChangeStatus>();
+		}
 		return changes;
 	}
 
